@@ -1,9 +1,10 @@
 import React from 'react';
-import { Button, Container, Navbar } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import joinIcon from '../../assets/join-icon.png';
 import { IoMdArrowDropdown } from "react-icons/io";
 import GroupPosts from './GroupPosts';
+import LocationSection from './LocationSection';
 
 const GroupPostsSection = () => {
     return (
@@ -43,7 +44,7 @@ const GroupPostsSection = () => {
                 <div className="col-md-8">
                     <GroupPosts></GroupPosts>
                 </div>
-                <div className="col-md-4">Location</div>
+                <div className="col-md-4"><LocationSection></LocationSection></div>
             </div>
         </Container>
     );
