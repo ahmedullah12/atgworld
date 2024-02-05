@@ -35,8 +35,8 @@ const SignInModal = (props) => {
                     <input placeholder='Password' style={{width: '320px', height: "46px", backgroundColor: "#F7F8FA", border: "1px solid #D9D9DB", padding: "10px"}} type="text" name="" id="" /><br />
                     <button style={{width: "100%", borderRadius: "30px"}} className='btn btn-primary mt-3 mb-4'> Sign In</button>
 
-                    <button style={{width: "100%", backgroundColor: "white", border: "1px solid #D9D9DB", padding: "10px 0px", marginBottom: "10px"}}> <img src={fblogo} alt="" />Sign in with Facebook</button>
-                    <button style={{width: "100%", backgroundColor: "white", border: "1px solid #D9D9DB", padding: "10px 0px"}}> <img src={googlelogo} alt="" />Sign in with Google</button>
+                    <button style={{width: "100%", backgroundColor: "white", border: "1px solid #D9D9DB", padding: "10px 0px", marginBottom: "10px"}}> <img className='me-2' src={fblogo} alt="" />Sign in with Facebook</button>
+                    <button style={{width: "100%", backgroundColor: "white", border: "1px solid #D9D9DB", padding: "10px 0px"}}> <img className='me-2' src={googlelogo} alt="" />Sign in with Google</button>
                     <p className='text-center fw-bold mt-2'>Forgot Password?</p>
                 </form>
             </div>
