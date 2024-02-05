@@ -2,12 +2,15 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../../assets/logo.png'
 import { Form, FormControl, InputGroup } from 'react-bootstrap';
-import { IoMdSearch } from "react-icons/io";
+import { IoMdArrowDropdown, IoMdSearch } from "react-icons/io";
 import { TbTriangleInvertedFilled } from "react-icons/tb";
 import { FaCircle } from "react-icons/fa6";
 import { PiRectangleFill } from "react-icons/pi";
+import { useState } from 'react';
+import SignInModal from '../SignInModal/SignInModal';
 
 function Header() {
+  const [modalShow, setModalShow] = useState(false);
   return (
     <Navbar className="bg-white ">
       <Container className='d-none d-md-flex'>
@@ -29,11 +32,12 @@ function Header() {
             </InputGroup>
           </Form>
         </Navbar.Collapse>
-        <Navbar.Collapse className="justify-content-end" style={{ maxWidth: '180px' }}>
-          <Navbar.Text className='text-black'>
-            Create Account. Its Free
+        <Navbar.Collapse className="justify-content-end" style={{ maxWidth: '200px' }}>
+          <Navbar.Text onClick={() => setModalShow(true)} className='text-black' style={{cursor: "pointer"}}>
+            Create Account. <span className='text-primary'>Its Free <IoMdArrowDropdown/></span>
           </Navbar.Text>
         </Navbar.Collapse>
+        <SignInModal show={modalShow} onHide={() => setModalShow(false)}/>
       </Container>
       <div className='d-flex align-items-center d-md-none ms-auto me-2' style={{gap: "10px"}}>
         <PiRectangleFill size={20} style={{color: "#868E96"}}/>
