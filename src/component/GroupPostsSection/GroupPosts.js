@@ -19,11 +19,11 @@ const GroupPosts = () => {
     return (
         <div>
             {/* post 1 */}
-            <div className='border rounded pb-4 mb-3' style={{width: "700px"}}>
+            <div className=' rounded pb-4 mb-3 post'>
                 <img src={post1} style={{width: "100%", height: "220px"}} alt="" />
                 <h6 style={{fontSize: "18px", margin: "20px 0 10px 20px"}}>Article</h6>
                 <div className='row' style={{marginLeft: "20px"}}>
-                    <h4 className='col-10 p-0' style={{fontSize: "22px"}}>What if famous brands had regular fonts? Meet RegulaBrands!</h4>
+                    <h4 className='col-10 p-0 post-title' >What if famous brands had regular fonts? Meet RegulaBrands!</h4>
                     <Dropdown className='col-2 text-end'>
                         <Dropdown.Toggle 
                             variant="success" 
@@ -44,14 +44,17 @@ const GroupPosts = () => {
                         </Dropdown.Menu>
                     </Dropdown>
                 </div>
-                <p className='p-0' style={{fontSize: "19px", color: "#5C5C5C", marginLeft: "20px"}}>I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
+                <p className='p-0 post-text' style={{color: "#5C5C5C", marginLeft: "20px"}}>I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
                 <div className='row p-0' style={{marginLeft: "20px"}}>
                     <div className='col-8 d-flex align-items-center p-0'>
                         <img  src={user1} alt="" />
-                        <p className='ms-2 mt-2 fw-bold'>Sarthak Kamra</p>
+                        <div>
+                            <p className='ms-2 mt-2 fw-bold mb-0 mb-md-3'>Sarthak Kamra</p>
+                            <p className='d-block d-md-none ms-2 p-0 me-5'><FaRegEye /> 1.4k views</p>
+                        </div>
                     </div>
                     <div className='col-4 d-flex align-items-center'>
-                        <p className='ms-2 mt-2 me-5'><FaRegEye /> 1.4k views</p>
+                        <p className='d-none d-md-block ms-2 mt-2 me-5'><FaRegEye /> 1.4k views</p>
                         <button style={{ backgroundColor: "#EDEEF0", border: "0", padding: "7px 10px" }}>
                             <CiShare2 className='pb-1' size={20} />
                         </button>
@@ -59,11 +62,11 @@ const GroupPosts = () => {
                 </div>
             </div>
             {/* post 2 */}
-            <div className='border rounded pb-4 mb-3' style={{width: "700px"}}>
+            <div className='border rounded pb-4 mb-3 post'>
                 <img src={post2} style={{width: "100%", height: "220px"}} alt="" />
                 <h6 style={{fontSize: "18px", margin: "20px 0 10px 20px"}}>Education</h6>
                 <div className='row' style={{marginLeft: "20px"}}>
-                    <h4 className='col-10 p-0' style={{fontSize: "22px"}}>Tax Benefits for Investment under National Pension Scheme launched by Government</h4>
+                    <h4 className='col-10 p-0 post-title' >Tax Benefits for Investment under National Pension Scheme launched by Government</h4>
                     <Dropdown className='col-2 text-end'>
                         <Dropdown.Toggle 
                             variant="success" 
@@ -84,26 +87,29 @@ const GroupPosts = () => {
                         </Dropdown.Menu>
                     </Dropdown>
                 </div>
-                <p className='p-0' style={{fontSize: "19px", color: "#5C5C5C", marginLeft: "20px"}}>I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
+                <p className='p-0 post-text' style={{ color: "#5C5C5C", marginLeft: "20px"}}>I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
                 <div className='row p-0' style={{marginLeft: "20px"}}>
                     <div className='col-8 d-flex align-items-center p-0'>
                         <img  src={user2} alt="" />
-                        <p className='ms-2 mt-2 fw-bold'>Sarah West</p>
+                        <div>
+                            <p className='ms-2 mt-2 fw-bold mb-0 mb-md-3'>Sarthak Kamra</p>
+                            <p className='d-block d-md-none ms-2 p-0 me-5'><FaRegEye /> 1.4k views</p>
+                        </div>
                     </div>
                     <div className='col-4 d-flex align-items-center'>
-                        <p className='ms-2 mt-2 me-5'><FaRegEye /> 1.4k views</p>
-                        <button style={{ backgroundColor: "#EDEEF0", border: "0", padding: "5px 10px" }}>
-                            <CiShare2 size={20} />
+                        <p className='d-none d-md-block ms-2 mt-2 me-5'><FaRegEye /> 1.4k views</p>
+                        <button style={{ backgroundColor: "#EDEEF0", border: "0", padding: "7px 10px" }}>
+                            <CiShare2 className='pb-1' size={20} />
                         </button>
                     </div>
                 </div>
             </div>
             {/* post 3 */}
-            <div className='border rounded pb-4 mb-3' style={{width: "700px"}}>
+            <div className='border rounded pb-4 mb-3 post' >
                 <img src={post3} style={{width: "100%", height: "220px"}} alt="" />
                 <h6 style={{fontSize: "18px", margin: "20px 0 10px 20px"}}>Meetup</h6>
                 <div className='row' style={{marginLeft: "20px"}}>
-                    <h4 className='col-10 p-0' style={{fontSize: "22px"}}>Tax Benefits for Investment under National Pension Scheme launched by Government</h4>
+                    <h4 className='col-10 p-0 post-title' >Tax Benefits for Investment under National Pension Scheme launched by Government</h4>
                     <Dropdown className='col-2 text-end'>
                         <Dropdown.Toggle 
                             variant="success" 
@@ -134,20 +140,23 @@ const GroupPosts = () => {
                 <div className='row p-0' style={{marginLeft: "20px"}}>
                     <div className='col-8 d-flex align-items-center p-0'>
                         <img  src={user3} alt="" />
-                        <p className='ms-2 mt-2 fw-bold'>Ronal Jones</p>
+                        <div>
+                            <p className='ms-2 mt-2 fw-bold mb-0 mb-md-3'>Sarthak Kamra</p>
+                            <p className='d-block d-md-none ms-2 p-0 me-5'><FaRegEye /> 1.4k views</p>
+                        </div>
                     </div>
                     <div className='col-4 d-flex align-items-center'>
-                        <p className='ms-2 mt-2 me-5'><FaRegEye /> 1.4k views</p>
-                        <button style={{ backgroundColor: "#EDEEF0", border: "0", padding: "5px 10px" }}>
-                            <CiShare2 size={20} />
+                        <p className='d-none d-md-block ms-2 mt-2 me-5'><FaRegEye /> 1.4k views</p>
+                        <button style={{ backgroundColor: "#EDEEF0", border: "0", padding: "7px 10px" }}>
+                            <CiShare2 className='pb-1' size={20} />
                         </button>
                     </div>
                 </div>
             </div>
-            <div className='border rounded pb-4 mb-3' style={{width: "700px"}}>
+            <div className='border rounded pb-4 mb-3 post' >
                 <h6 style={{fontSize: "18px", margin: "20px 0 10px 20px"}}>Job</h6>
                 <div className='row' style={{marginLeft: "20px"}}>
-                    <h4 className='col-10 p-0' style={{fontSize: "22px"}}>Software Developer</h4>
+                    <h4 className='col-10 p-0 post-title'>Software Developer</h4>
                     <Dropdown className='col-2 text-end'>
                         <Dropdown.Toggle 
                             variant="success" 
@@ -179,13 +188,16 @@ const GroupPosts = () => {
                 </div>
                 <div className='row p-0' style={{marginLeft: "20px"}}>
                     <div className='col-8 d-flex align-items-center p-0'>
-                        <img  src={user3} alt="" />
-                        <p className='ms-2 mt-2 fw-bold'>Ronal Jones</p>
+                        <img  src={user4} alt="" />
+                        <div>
+                            <p className='ms-2 mt-2 fw-bold mb-0 mb-md-3'>Sarthak Kamra</p>
+                            <p className='d-block d-md-none ms-2 p-0 me-5'><FaRegEye /> 1.4k views</p>
+                        </div>
                     </div>
                     <div className='col-4 d-flex align-items-center'>
-                        <p className='ms-2 mt-2 me-5'><FaRegEye /> 1.4k views</p>
-                        <button style={{ backgroundColor: "#EDEEF0", border: "0", padding: "5px 10px" }}>
-                            <CiShare2 size={20} />
+                        <p className='d-none d-md-block ms-2 mt-2 me-5'><FaRegEye /> 1.4k views</p>
+                        <button style={{ backgroundColor: "#EDEEF0", border: "0", padding: "7px 10px" }}>
+                            <CiShare2 className='pb-1' size={20} />
                         </button>
                     </div>
                 </div>

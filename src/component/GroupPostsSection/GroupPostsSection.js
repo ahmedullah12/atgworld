@@ -5,11 +5,22 @@ import joinIcon from '../../assets/join-icon.png';
 import { IoMdArrowDropdown } from "react-icons/io";
 import GroupPosts from './GroupPosts';
 import LocationSection from './LocationSection';
+import './GroupPostsSection.css'
+import { BsFilter } from 'react-icons/bs';
 
 const GroupPostsSection = () => {
     return (
-        <Container>
-            <div className='ps-5 position-relative'>
+        <div className='container-fluid container-md'>
+            <div className="d-block d-md-none d-flex justify-content-between align-items-center p-3">
+                <div className="text-start">
+                    <p className="m-0 fw-bold">Posts(368)</p>
+                </div>
+
+                <div className="text-end">
+                    <Button variant="secondary">Filter: All <IoMdArrowDropdown/></Button>
+                </div>
+            </div>
+            <div className='d-none d-md-block ps-0 ps-md-5 position-relative'>
                 <Nav  variant="underline" defaultActiveKey="/home">
                     <Nav.Item style={{zIndex: "100"}}>
                         <Nav.Link  href="/home">All Posts(32)</Nav.Link>
@@ -40,13 +51,13 @@ const GroupPostsSection = () => {
                 
             </div>
                 {/* posts */}
-            <div className='row ps-5 mt-4'>
-                <div className="col-md-8">
+            <div className='row ps-0 ps-md-5 mt-4'>
+                <div className="p-0 col-md-8">
                     <GroupPosts></GroupPosts>
                 </div>
-                <div className="col-md-4"><LocationSection></LocationSection></div>
+                <div className="col-md-4 d-none d-md-block"><LocationSection></LocationSection></div>
             </div>
-        </Container>
+        </div>
     );
 };
 

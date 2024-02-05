@@ -1,11 +1,13 @@
 import React from 'react';
-import bgImage from '../../assets/group-banner.png'
-import { Container } from 'react-bootstrap';
+import './GroupBanner.css'
+import { FaArrowLeft } from 'react-icons/fa';
 
 
 const GroupBanner = () => {
     return (
-        <div className='w-full mt-2 position-relative mb-3' style={{backgroundImage: `url(${bgImage})`, height: "420px"}}>
+        <div className='w-full mt-2 position-relative mb-3 banner-bg' 
+
+        >
             <div
              className='position-absolute inset-0'
              style={{
@@ -14,12 +16,21 @@ const GroupBanner = () => {
              width: "100%"
              }}
             ></div>
-            <Container>
-            <div style={{top: "65%"}} className='position-absolute  left-0 ps-5'>
-                <h3 style={{fontSize: "36px", }} className='text-white'>Computer Engineering</h3>
-                <p style={{fontSize: "18px"}} className='text-white'>142,765 Computer Engineers follow this</p>
+            <div className='container-fluid container-md'>
+                <div style={{top: "65%"}} className='position-absolute  left-0 ps-0 ps-md-5'>
+                    <h3  className='text-white banner-title'>Computer Engineering</h3>
+                    <p  className='text-white banner-text'>142,765 Computer Engineers follow this</p>
+                </div>
+                <FaArrowLeft
+          className='d-block d-md-none position-absolute top-0 start-0 m-3 text-white'
+          style={{ fontSize: '24px', cursor: 'pointer' }}
+        />
+        <button
+          className='d-block d-md-none position-absolute top-0 end-0 m-3 btn btn-outline-light'
+        >
+          Join Group
+        </button>
             </div>
-            </Container>
         </div>
     );
 };

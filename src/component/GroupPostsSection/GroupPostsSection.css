@@ -1,0 +1,28 @@
+.post{
+    width: 700px;
+    border: 1px solid #5C5C5C;
+}
+
+.post-title{
+    font-size: 22px;
+}
+.post-text{
+    font-size: 19px;
+    white-space: nowrap;     /* Keeps text in one line */
+  overflow: hidden;        /* Hides the overflowed text */
+  text-overflow: ellipsis;  /* Displays an ellipsis (...) when text is truncated */
+  max-width: 100%;          
+}
+
+@media screen and (max-width: 767px){
+    .post{
+        width: 100%;
+        border: none;
+    }
+    .post-title{
+        font-size: 16px;
+    }
+    .post-text{
+        font-size: 14px;
+    }
+}
