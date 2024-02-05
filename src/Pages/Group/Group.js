@@ -1,14 +1,14 @@
 import React from 'react';
 import Header from '../../component/Header/Header';
 import GroupBanner from '../../component/GroupBanner/GroupBanner';
-import GroupPosts from '../../component/GroupPosts/GroupPosts';
+import GroupPostsSection from '../../component/GroupPostsSection/GroupPostsSection';
 
 const Group = () => {
     return (
         <div>
             <Header></Header>
             <GroupBanner></GroupBanner>
-            <GroupPosts></GroupPosts>
+            <GroupPostsSection></GroupPostsSection>
         </div>
     );
 };
